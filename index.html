@@ -1,14 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Assignment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Assignments</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+    h1 { text-align: center; color: #173b70; }
+    .assignment {
+      background: white;
+      padding: 16px;
+      margin: 16px auto;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 2px 7px #ccc;
+    }
+    button {
+      padding: 10px 16px;
+      background: #173b70;
+      color: white;
+      border: 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+  </style>
 </head>
 <body>
-    <h1>JavaScript Assignment</h1>
-    <p>Welcome to my JavaScript Assignment.</p>
+  <h1>JavaScript Assignment Internship</h1>
+  <p style="text-align:center">BCA 5th Semester | 2026</p>
 
-    <script src="capstone.js"></script>
+  <div class="assignment">
+    <h2>Assignment 1: Variables and Data Types</h2>
+    <button onclick="showResult(1)">Show Output</button>
+    <pre id="result1"></pre>
+  </div>
+
+  <div class="assignment">
+    <h2>Assignment 2: Bill and Tip Calculation</h2>
+    <button onclick="showResult(2)">Show Output</button>
+    <pre id="result2"></pre>
+  </div>
+
+  <div class="assignment">
+    <h2>Assignment 3: Grade and Conditions</h2>
+    <button onclick="showResult(3)">Show Output</button>
+    <pre id="result3"></pre>
+  </div>
+
+  <div class="assignment">
+    <h2>Assignment 4: Loops</h2>
+    <button onclick="showResult(4)">Show Output</button>
+    <pre id="result4"></pre>
+  </div>
+
+  <div class="assignment">
+    <h2>Assignment 5: Functions and Scope</h2>
+    <button onclick="showResult(5)">Show Output</button>
+    <pre id="result5"></pre>
+  </div>
+
+  <div class="assignment">
+    <h2>Assignment 6: Arrays and Objects</h2>
+    <button onclick="showResult(6)">Show Output</button>
+    <pre id="result6"></pre>
+  </div>
+
+  <div class="assignment">
+    <h2>Capstone: Inventory System</h2>
+    <p>Run the inventory project using the button below.</p>
+    <button onclick="runCapstone()">Run Capstone</button>
+    <pre id="capstoneResult"></pre>
+  </div>
+
+  <script>
+    function showResult(n) {
+      const results = {
+        1: "Variables and Data Types\nExample: name = Ayush\nAge = 20\nType: string, number, boolean",
+        2: "Bill Amount: $100\nTip (15%): $15\nTotal Bill: $115",
+        3: "Score: 85\nGrade: B\nResult: Passed",
+        4: "Multiplication Table of 5:\n5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\nFound: 12",
+        5: "Area 1: 20\nArea 2: 30\nScope example: blockVar is not accessible outside its block.",
+        6: "Products: Laptop, Mouse, Keyboard\nAffordable items: Mouse\nFormatted product list displayed."
+      };
+      document.getElementById("result" + n).textContent = results[n];
+    }
+
+    function runCapstone() {
+      document.getElementById("capstoneResult").textContent =
+        "Inventory System\nLaptop: $800\nMouse: $25\nMonitor: $150\nTotal Inventory Value: $975\nAfter 10% Discount: $877.50\nAffordable Items: Mouse, Monitor";
+    }
+  </script>
 </body>
 </html>
